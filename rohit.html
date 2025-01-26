@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rohit.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html,body{
+        height: 100%;
+        width:100%;
+        overflow: hidden;
+    }
+    #main{
+        height: 100%;
+        width:100%;
+        background-color: rgba(75, 13, 13, 0.993);
+        /* background-color: #8d5d5d; */
+        display: flex ;
+        /* background: linear-gradient(45deg,#8d8d8d,#8d5d5d,#cccccc); */
+    }
+    #part1{
+        height: 100%;
+        width: 24%;
+        /* background-color: antiquewhite; */
+    }
+    #part2{
+        height: 100%;
+        width:67%;
+        background-image: url(./WhatsApp\ Image\ 2025-01-26\ at\ 04.10.33_d318cc23.jpg);
+        background-size: cover;
+        background-position: center;
+        mix-blend-mode:normal;
+    }
+    #overlay{
+        height: 100%;
+        width: 100%;
+        /* background-color: #ad464615; */
+        background-color: #af808015;
+        
+    }
+    #part3{
+        height: 100%;
+        width: 9%;
+        /* background-color: cadetblue; */
+    }
+    #text-div{
+        height: 35vh;
+        width: 29vw;
+        /* background-color: rgb(238, 241, 241); */
+        position: absolute;
+        left:7.6%;
+        top:53%;
+        transform: translate(-0%,-50%);
+    }
+    #text-div>h1{
+        font-size: 9.3vh;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: rgb(252, 252, 255);
+        line-height: 10vh;
+        letter-spacing: 1..5vh;
+        text-transform: uppercase;
+    }
+    #small-img{
+        height: 30vw;
+        width: 20vw;
+        position: absolute;
+        right: 7%;
+        top:25%;
+        background-color: #75313115;
+        background-image: url(./WhatsApp\ Image\ 2025-01-26\ at\ 04.10.33_d318cc23.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: .8vw;
+        mix-blend-mode:hard-light;
+    }
+    #overlay2{
+        height: 100%;
+        width: 100%;
+        /* background-color: #ad464615;
+         */
+         background:linear-gradient(#030303);
+    }
+    #vertical-text{
+        position: absolute;
+        right: -40%;
+       
+    }
+    #vertical-text h1{
+        color: transparent;
+        font-size: 8.8vh;
+        font-family: 'Courier New', Courier, monospace;
+        transform: rotate(90deg);
+        font-weight: 900;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #fff;
+        letter-spacing: 12px;
+        transform-origin: 0% 0%;
+        text-transform: uppercase;
+    }
+    </style>
+    <div id="main">
+        <div id="part1"></div>
+        <div id="part2">
+            <div id="overlay"></div>
+        </div>
+        <div id="part3"></div>
+        <div id="text-div">
+            <h1> india's</h1>
+            <h1> captain</h1>
+            <h1> rohit</h1>
+            <h1>sharma </h1>
+        </div>
+        <div id="small-img">
+            <div id="overlay2"></div>
+        </div>
+        <div id="vertical-text">
+            <h1>Rohit hitman </h1>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="rohit.js">
+   let TL = gsap.timeline();
+    TL.from("#part2",{
+        y:100,
+        delay:0.5,
+        duration:2,
+        opacity:0,
+    })
+    TL.from("#text-div h1",{
+        x:-100,
+        opacity:0,
+        duration:3,
+        delay:0.1,
+        stagger:0.4,
+    })
+    TL.from("#small-img",{
+        x:100,
+        opacity:0,
+        duration:1,
+    }
+    )
+    </script>
+    
+</body>
+</html>
